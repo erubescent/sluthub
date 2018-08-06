@@ -5,61 +5,62 @@
     <div>
 
         <!-- main content/container to hold everything -->
-        <div class="container mx-auto px-4 pt-6 pb-8 h-screen w-full">
 
-            <div class="px-2">
-                <div class="flex flex-wrap -mx-4">
+        <div class="px-2">
+            <div class="flex flex-wrap -mx-4">
 
-                    {% set entries = craft
-                        .entries()
-                        .section('slut')
-                        .limit(10)
-                        .all() %}
-                    {% for entry in entries %}
+                {% set entries = craft
+                    .entries()
+                    .section('slut')
+                    .limit(10)
+                    .all() %}
+                {% for entry in entries %}
 
-                        <div class="w-full lg:w-1/2 px-2 mb-2">
-                            <div class="h-12">
-                                <!-- item start -->
-                                <div class="max-w-md w-full lg:flex">
-                                    <div class="img-responsive">
-                                        <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover lg:rounded-t-none shadow lg:rounded-l text-center overflow-hidden" style="background-image: url('{{ entry.slutImage }}')" title="placeholder"></div>
+                    <div class="w-full lg:w-1/2 px-2 mb-2">
+                        <div class="h-12">
+                            <!-- item start -->
+                            <div class="max-w-md w-full lg:flex">
+                                <!-- responsive only image -->
+                                <img class="w-full lg:hidden" src="{{ entry.slutImage }}" alt="wowzers">
+                                <!-- end responsive only image -->
+                                <div class="img-responsive">
+                                    <div class="h-full lg:h-auto lg:w-48 bg-cover lg:rounded-t-none shadow lg:rounded-l text-center overflow-hidden" style="background-image: url('{{ entry.slutImage }}');" title="cum slut"></div>
+                                </div>
+                                <div class="border-r border-b border-l border-grey-light flex-grow lg:border-l-0 lg:border-t shadow lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                                    <div class="mb-8">
+                                        <p class="text-sm text-grey-dark flex items-center">
+                                            <svg class="fill-current text-grey w-3 h-3 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                                                <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z"/>
+                                            </svg>
+                                            &nbsp;
+                                        </p>
+                                        <div class="text-black font-bold text-xl mb-2">
+                                            <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                        </div>
+                                        <p class="text-grey-darker text-base">{{ entry.slutShortDescription }}</p>
                                     </div>
-                                    <div class="border-r border-b border-l border-grey-light flex-grow lg:border-l-0 lg:border-t shadow lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                                        <div class="mb-8">
-                                            <p class="text-sm text-grey-dark flex items-center">
-                                                <svg class="fill-current text-grey w-3 h-3 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
-                                                    <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z"/>
-                                                </svg>
-                                                &nbsp;
-                                            </p>
-                                            <div class="text-black font-bold text-xl mb-2">
-                                                <a href="{{ entry.url }}">{{ entry.title }}</a>
-                                            </div>
-                                            <p class="text-grey-darker text-base">{{ entry.slutShortDescription }}</p>
-                                        </div>
-                                        <div class="flex justify-between items-center">
-                                            <button onclick="window.location.href='{{ entry.gatewayLink }}'" class="bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
-                                                <svg class="fill-current w-4 h-4 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
-                                                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
-                                                </svg>
-                                                <span>Purchase</span>
-                                            </button>
+                                    <div class="flex justify-between items-center">
+                                        <button onclick="window.location.href='{{ entry.gatewayLink }}'" class="bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                                            <svg class="fill-current w-4 h-4 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                                                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+                                            </svg>
+                                            <span>Purchase</span>
+                                        </button>
 
-                                            <span class="font-mono">${{ entry.slutPrice }}</span>
+                                        <span class="font-mono">${{ entry.slutPrice }}</span>
 
-                                        </div>
                                     </div>
                                 </div>
-                                <!-- item end -->
                             </div>
+                            <!-- item end -->
+                            <br/>
                         </div>
-                    {% endfor %}
-                </div>
-
+                    </div>
+                {% endfor %}
             </div>
+
         </div>
 
     </div>
-
 </div>
 {% endblock %}

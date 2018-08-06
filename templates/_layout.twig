@@ -67,7 +67,7 @@
                         </a>
                     </div>
                     <div class="flex flex-no-shrink items-stretch items-center hover:bg-purple-dark h-12 float-right">
-                        <a href="#" class="font-mono flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-transparent">
+                        <a href="/faq" class="font-mono flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-transparent">
                             <span class="text-white">FAQ</span>
                         </a>
                     </div>
@@ -81,18 +81,23 @@
                 <div class="container mx-auto px-4">
                     <div class="flex -mb-px">
 
-                        <div class="font-mono text-purple flex items-center py-4 border-b border-purple-dark">
-                            Dashboard
-                        </div>
+                        {# <div class="font-mono text-purple flex items-center py-4 border-b border-purple-dark">
+                            Home
+                        </div> #}
 
                     </div>
                 </div>
             </div>
             <!-- end secondary nav-->
 
-        {% block main %}
-            
-        {% endblock %}
-
+            <div class="container mx-auto">
+                <div class="wrapper">
+                    <div class="px-4 pt-6 pb-8 h-screen w-full">
+                        {% block main %}
+                        
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
         </body>
-</html>
+    </html>

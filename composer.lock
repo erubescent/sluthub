@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7704c3e508e8b3bc3f3eb31de0bbf2c4",
+    "content-hash": "a5dde3e3beca67282a570836c312e2b9",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -903,6 +903,44 @@
                 "rss": "https://github.com/focuslabllc/craft-cheat-sheet/commits/v2.atom"
             },
             "time": "2018-08-05T18:51:58+00:00"
+        },
+        {
+            "name": "froala/wysiwyg-editor",
+            "version": "v2.8.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/wysiwyg-editor/zipball/db00a7694d8a694f78e87c2bd429f72c5a92dc5e",
+                "reference": "db00a7694d8a694f78e87c2bd429f72c5a92dc5e",
+                "shasum": ""
+            },
+            "type": "component",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Froala Labs",
+                    "email": "support@froala.com"
+                }
+            ],
+            "description": "A beautiful jQuery WYSIWYG HTML rich text editor. High performance and modern design make it easy to use for developers and loved by users.",
+            "homepage": "https://www.froala.com/wysiwyg-editor",
+            "keywords": [
+                "editor",
+                "froala",
+                "froala-editor",
+                "froala-wysiwyg",
+                "html",
+                "javascript",
+                "jquery",
+                "jquery-plugin",
+                "rich editor",
+                "rich text editor",
+                "rte",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2018-06-23T22:43:12+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
