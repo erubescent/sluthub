@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8eaa6afa926ed05d6df4e6ee26f67da5",
+    "content-hash": "7704c3e508e8b3bc3f3eb31de0bbf2c4",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -296,6 +296,56 @@
                 "validator"
             ],
             "time": "2018-04-30T10:33:04+00:00"
+        },
+        {
+            "name": "craftcms/ckeditor",
+            "version": "1.0.0-beta.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/185f6064cc135d717cf7b43c93aff2063ce399f1",
+                "reference": "185f6064cc135d717cf7b43c93aff2063ce399f1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CKEditor",
+                "handle": "ckeditor",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/ckeditor/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/ckeditor/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\ckeditor\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Edit rich text content in Craft CMS using CKEditor.",
+            "keywords": [
+                "ckeditor",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/ckeditor/issues?state=open",
+                "source": "https://github.com/craftcms/ckeditor",
+                "docs": "https://github.com/craftcms/ckeditor",
+                "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
+            },
+            "time": "2018-01-15T18:06:22+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -804,11 +854,11 @@
         },
         {
             "name": "focuslabllc/craft-cheat-sheet",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/focuslabllc/craft-cheat-sheet/zipball/097d24f406f06327131883e189d9fbdf86e156fc",
-                "reference": "097d24f406f06327131883e189d9fbdf86e156fc",
+                "url": "https://api.github.com/repos/focuslabllc/craft-cheat-sheet/zipball/e9778a73f628131d80c61876e856d27084c492ec",
+                "reference": "e9778a73f628131d80c61876e856d27084c492ec",
                 "shasum": ""
             },
             "require": {
@@ -818,7 +868,7 @@
             "extra": {
                 "name": "Craft Cheat Sheet",
                 "handle": "cheat-sheet",
-                "version": "2.0.0",
+                "version": "2.0.2",
                 "documentationUrl": "https://github.com/focuslabllc/craft-cheat-sheet/blob/master/readme.md"
             },
             "autoload": {
@@ -852,7 +902,7 @@
                 "docs": "https://github.com/focuslabllc/craft-cheat-sheet",
                 "rss": "https://github.com/focuslabllc/craft-cheat-sheet/commits/v2.atom"
             },
-            "time": "2018-08-03T20:07:37+00:00"
+            "time": "2018-08-05T18:51:58+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2614,7 +2664,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "craftcms/ckeditor": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

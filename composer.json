@@ -3,7 +3,8 @@
     "craftcms/cms": "3.0.18",
     "vlucas/phpdotenv": "^2.4.0",
     "ether/logs": "v3.0.0",
-    "focuslabllc/craft-cheat-sheet": "v2.0.0"
+    "focuslabllc/craft-cheat-sheet": "2.0.2",
+    "craftcms/ckeditor": "1.0.0-beta.2"
   },
   "autoload": {
     "psr-4": {

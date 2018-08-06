@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+        <title>Slut Hub</title>
+
+        <style>
+            .wrapper {
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+            body {
+                background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png");
+            }
+
+            body::after {
+                content: "";
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: hsla(180, 0%, 50%, 0.25);
+                pointer-events: none;
+            }
+
+            .p-6 {
+                padding: 1rem;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            .img-responsive {
+                display: flex;
+                max-width: 100%;
+                height: auto;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .nav-hover {
+                color: #333;
+            }
+        </style>
+    </head>
+
+    <body class="bg-fixed">
+        <div class="background">
+            <nav class="relative shadow select-none bg-purple lg:flex lg:items-stretch w-full">
+                <div class="flex justify-between container items-stretch mx-auto">
+                    <div class="flex flex-no-shrink items-stretch h-12">
+                        <a href="/" class="font-mono flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-transparent">
+                            <span>Slut Hub /></span>
+                        </a>
+                    </div>
+                    <div class="flex flex-no-shrink items-stretch items-center hover:bg-purple-dark h-12 float-right">
+                        <a href="#" class="font-mono flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-transparent">
+                            <span class="text-white">FAQ</span>
+                        </a>
+                    </div>
+                </div>
+
+            </nav>
+            <!-- end nav -->
+
+            <!-- start secondary nav -->
+            <div class="bg-white border-b">
+                <div class="container mx-auto px-4">
+                    <div class="flex -mb-px">
+
+                        <div class="font-mono text-purple flex items-center py-4 border-b border-purple-dark">
+                            Dashboard
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end secondary nav-->
+
+        {% block main %}
+            
+        {% endblock %}
+
+        </body>
+</html>
