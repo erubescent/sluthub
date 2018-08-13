@@ -3,21 +3,53 @@
 {% block main %}
 
     <div class="wrapper">
-        <div class="font-mono bg-white border-r border-b">
-            <div class="p-2">
 
-                <h2>What's Included?</h2>
-                <p>- Private Snapchat Username
-                    <br/>
-                </p>
-                <br/>
+        {% set entries = craft
+            .entries()
+            .section('pages')
+            .limit(10)
+            .inReverse(true)
+            .all() %}
+        {% for entry in entries %}
+            <div class="flex mb-4">
+                <div class="w-screen">
+                    <button class="accordion">
+                        <div class="font-mono bg-white hover:bg-grey-lighter text-left border">
+                            <div class="p-2">
 
-                <h2>Is she STD free?</h2>
-                <p>No.</p>
+                                <span>{{ entry.faqLine }}</span>
 
-                <br/>
-            </div>
+                                <br/>
+                            </div>
+                        </button>
+                        <div class="dropdown">
+                            <div class="font-mono p-2 bg-grey inner-shadow">
+                                {% for block in entry.responseMatrix.all() %}
+                                    {% if block.type == "responseBlock" %}
+                                        <ol>
+
+                                            <li>{{ block.response1 }}</li>
+                                            <li>{{ block.response2 }}</li>
+                                            <li>{{ block.response3 }}</li>
+                                            <li>{{ block.response4 }}</li>
+
+                                        </ol>
+                                    {% elseif block.type == "unorderedResponses" %}
+                                        <ul class="unstyled">
+                                            <li>{{ block.r1 }}</li>
+                                            <li>{{ block.r2 }}</li>
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
+    {% js %}
+    var acc = document.getElementsByClassName("accordion"); var i; for (i = 0; i < acc.length; i++) { acc[i].addEventListener("click", function () { this.classList.toggle("active"); var dropdown = this.nextElementSibling; if (dropdown.style.maxHeight) { dropdown.style.maxHeight = null; } else { dropdown.style.maxHeight = dropdown.scrollHeight + "px"; } }); }
+    {% endjs %}
 {% endblock %}

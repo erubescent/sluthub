@@ -13,20 +13,21 @@
                     .entries()
                     .section('slut')
                     .limit(10)
+                    .inReverse(true)
                     .all() %}
                 {% for entry in entries %}
 
                     <div class="w-full lg:w-1/2 px-2 mb-2">
                         <div class="h-12">
                             <!-- item start -->
-                            <div class="max-w-md w-full lg:flex">
+                            <div id="slutCard" class="animated fadeIn max-w-md w-full lg:flex">
                                 <!-- responsive only image -->
                                 <img class="w-full lg:hidden" src="{{ entry.slutImage }}" alt="wowzers">
                                 <!-- end responsive only image -->
                                 <div class="img-responsive">
                                     <div class="h-full lg:h-auto lg:w-48 bg-cover lg:rounded-t-none shadow lg:rounded-l text-center overflow-hidden" style="background-image: url('{{ entry.slutImage }}');" title="cum slut"></div>
                                 </div>
-                                <div class="border-r border-b border-l border-grey-light flex-grow lg:border-l-0 lg:border-t shadow lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                                <div class="border-r border-b border-l border-grey-light lg flex-grow lg:border-l-0 lg:border-t shadow lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                                     <div class="mb-8">
                                         <p class="text-sm text-grey-dark flex items-center">
                                             <svg class="fill-current text-grey w-3 h-3 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
@@ -40,10 +41,12 @@
                                         <p class="text-grey-darker text-base">{{ entry.slutShortDescription }}</p>
                                     </div>
                                     <div class="flex justify-between items-center">
-                                        <button onclick="window.location.href='{{ entry.gatewayLink }}'" class="bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
-                                            <svg class="fill-current w-4 h-4 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
-                                                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
-                                            </svg>
+                                        <button id="loading" onclick="window.location.href='{{ entry.gatewayLink }}'" class="loading bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                                            <div>
+                                                <svg class="fill-current w-4 h-4 mr-2" xmlns="https://www.w3.org/2000/svg" viewbox="0 0 20 20">
+                                                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+                                                </svg>
+                                            </div>
                                             <span>Purchase</span>
                                         </button>
 
